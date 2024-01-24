@@ -251,7 +251,6 @@ MonoBehaviour:
   buildingPart3: {fileID: 5132813784957855444, guid: ab66e900875bd7940924fd1be0c1e118, type: 3}
   buildingPart4: {fileID: 2921927520840707911, guid: 95fb935fdb40f4643893e2d550caf3a2, type: 3}
   specialAbilitySpeed: {fileID: 0}
-  currentSpecialAbility: 0
 --- !u!4 &984508227
 Transform:
   m_ObjectHideFlags: 0
