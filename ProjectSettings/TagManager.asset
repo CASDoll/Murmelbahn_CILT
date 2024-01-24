@@ -3,7 +3,13 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - buildingPart1
+  - buildingPart2
+  - buildingPart3
+  - buildingPart4
+  - Ground
+  - marble
   layers:
   - Default
   - TransparentFX
