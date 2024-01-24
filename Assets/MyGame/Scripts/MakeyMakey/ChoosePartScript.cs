@@ -8,7 +8,8 @@ public class ChoosePartScript : MonoBehaviour
     public GameObject buildingPart2;
     public GameObject buildingPart3;
     public GameObject buildingPart4;
-    
+    public ChangeSpeedScript specialAbilitySpeed;
+
     int currentPart = 0;
     int currentSpecialAbility = 0;
     string currentPartTag = "buildingPart0";
@@ -28,7 +29,8 @@ public class ChoosePartScript : MonoBehaviour
             currentPart = 1;
             DestroyArray();
             currentPartTag = "buildingPart1";
-            Debug.Log("Part 1 runthrough");
+            currentSpecialAbility = 0;
+            Debug.Log("changed object to " + currentPartTag);
         }
 
         if (Input.GetKey(KeyCode.RightArrow) && currentPart != 2)
@@ -37,6 +39,8 @@ public class ChoosePartScript : MonoBehaviour
             currentPart = 2;
             DestroyArray(); ;
             currentPartTag = "buildingPart2";
+            currentSpecialAbility = 0;
+            Debug.Log("changed object to " + currentPartTag);
         }
 
         if (Input.GetKey(KeyCode.UpArrow) && currentPart != 3)
@@ -45,6 +49,8 @@ public class ChoosePartScript : MonoBehaviour
             currentPart = 3;
             DestroyArray();
             currentPartTag = "buildingPart3";
+            currentSpecialAbility = 0;
+            Debug.Log("changed object to " + currentPartTag);
         }
 
         if (Input.GetKey(KeyCode.DownArrow) && currentPart != 4)
@@ -53,27 +59,38 @@ public class ChoosePartScript : MonoBehaviour
             currentPart = 4;
             DestroyArray();
             currentPartTag = "buildingPart4";
+            currentSpecialAbility = 0;
+            Debug.Log("changed object to " + currentPartTag);
         }
 
-        if (Input.GetMouseButton(1) && currentSpecialAbility != 1)
+        if (currentPartTag != "buildingPart0" && Input.GetMouseButtonDown(0) && currentSpecialAbility > -1)
         {
-            ToggleSpecialAbility(-1);
+            currentSpecialAbility = currentSpecialAbility - 1; 
+            Debug.Log("made ability slower");
+            ToggleSpecialAbility(0.5f);
+            
         }
-        
-        if (Input.GetKey(KeyCode.Space) && currentSpecialAbility != 2)
+
+        if (currentPartTag != "buildingPart0" && Input.GetKeyDown(KeyCode.Space) && currentSpecialAbility < 1)
         {
-            ToggleSpecialAbility(1);
+            currentSpecialAbility = currentSpecialAbility + 1;
+            Debug.Log("made ability faster");
+            ToggleSpecialAbility(2f);
+            
         }
     }
 
-    void ToggleSpecialAbility(int current)
+    void ToggleSpecialAbility(float current)
     {
         GameObject currentGameObject;
         currentGameObject = GameObject.FindGameObjectWithTag(currentPartTag);
-      /*if (-1 <= currentGameObject.GetComponent("ChangeSpeedScript").speedChange + current <= 1)
+        specialAbilitySpeed = currentGameObject.GetComponent<ChangeSpeedScript>();
+
+        if ((0.5 <= currentGameObject.GetComponent<ChangeSpeedScript>().speedChange) && (2 >= currentGameObject.GetComponent<ChangeSpeedScript>().speedChange))
         {
-            currentGameObject.GetComponent("ChangeSpeedScript").speedChange = currentGameObject.GetComponent("ChangeSpeedScript").speedChange + current;
-        }*/
+            currentGameObject.GetComponent<ChangeSpeedScript>().speedChange = currentGameObject.GetComponent<ChangeSpeedScript>().speedChange * current;
+        }
+        Debug.Log("new speed multiplier equals " + currentGameObject.GetComponent<ChangeSpeedScript>().speedChange);
     }
 
     void DestroyArray()
@@ -81,6 +98,7 @@ public class ChoosePartScript : MonoBehaviour
         if (currentPartTag != "buildingPart0")
         {            
             Destroy(GameObject.FindGameObjectWithTag(currentPartTag));
+            currentPartTag = "buildingPart0";
         }
     }
 }

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2690697214336587300}
   - component: {fileID: 2100991402714817749}
   - component: {fileID: 363015794600893698}
+  - component: {fileID: -6253993412251583006}
   m_Layer: 0
   m_Name: BuildingPart3
   m_TagString: buildingPart3
@@ -105,3 +106,18 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-6253993412251583006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5132813784957855444}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2782c05ae6f9d240bcd0ce36e8abe95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedChange: 1
+  marbleRigidbody: {fileID: 0}
+  currentVelocity: {x: 0, y: 0, z: 0}

@@ -250,8 +250,8 @@ MonoBehaviour:
   buildingPart2: {fileID: 7246108774414200153, guid: 9494f272adcc17a4095e3f7197ba9e01, type: 3}
   buildingPart3: {fileID: 5132813784957855444, guid: ab66e900875bd7940924fd1be0c1e118, type: 3}
   buildingPart4: {fileID: 2921927520840707911, guid: 95fb935fdb40f4643893e2d550caf3a2, type: 3}
-  specialPart1: {fileID: 0}
-  specialPart2: {fileID: 0}
+  specialAbilitySpeed: {fileID: 0}
+  currentSpecialAbility: 0
 --- !u!4 &984508227
 Transform:
   m_ObjectHideFlags: 0
@@ -352,13 +352,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1718471110}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -10}
+  m_LocalRotation: {x: 0.15774818, y: -0.40159988, z: 0.11457652, w: 0.8948214}
+  m_LocalPosition: {x: 19.17, y: 6.89, z: -10.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 21.984, y: -47.4, z: 4.847}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 879174500135005594}
   - component: {fileID: 5169437416100368797}
   - component: {fileID: 8990890667912552786}
+  - component: {fileID: -3101428644153688533}
   m_Layer: 0
   m_Name: BuildingPart4
   m_TagString: buildingPart4
@@ -107,3 +108,18 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-3101428644153688533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2921927520840707911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2782c05ae6f9d240bcd0ce36e8abe95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speedChange: 1
+  marbleRigidbody: {fileID: 0}
+  currentVelocity: {x: 0, y: 0, z: 0}
