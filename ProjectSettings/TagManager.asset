@@ -9,6 +9,7 @@ TagManager:
   - buildingPart3
   - buildingPart4
   - buildingPart0
+  - Ground
   layers:
   - Default
   - TransparentFX
