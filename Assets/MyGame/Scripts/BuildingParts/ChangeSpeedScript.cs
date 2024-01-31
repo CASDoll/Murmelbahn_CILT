@@ -5,12 +5,12 @@ using UnityEngine;
 public class ChangeSpeedScript : MonoBehaviour
 {
     public float speedChange = 1f;
-    public Rigidbody marbleRigidbody;
+    Rigidbody marbleRigidbody;
     Vector3 currentVelocity;
 
-    void Update()
+    private void Start()
     {
-        
+        marbleRigidbody = GameObject.FindGameObjectWithTag("marble").GetComponent<Rigidbody>();
     }
 
     private void OnTriggerEnter(Collider other)
