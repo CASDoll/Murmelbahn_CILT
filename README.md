@@ -31,3 +31,11 @@ STAND ZUM ZEITPUNKT DER ÜBERGABE <br>
   - Bauteile benötigen Trigger-Bereich
   - Murmel benötigt Rigidbody und tag "marble"
   - variable "speedChange" verdoppelt oder halbiert Geschwindigkeit der Murmel in Rollrichtung
+
+- VR implementiert:
+  -Die Scripts für die META Quest und Oculus sind drinnen
+  -muss noch ausprobieren mit einer VR Brille
+
+- ObjectSnapper Script:
+  -momentan werden die Bauteile noch mit Leertaste gesnapt - für finale Version mit Handgrab.
+  -Bauteile werden in 45° Winkel gesnapt.
