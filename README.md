@@ -39,3 +39,10 @@ STAND ZUM ZEITPUNKT DER ÜBERGABE <br>
 - ObjectSnapper Script:
   -momentan werden die Bauteile noch mit Leertaste gesnapt - für finale Version mit Handgrab.
   -Bauteile werden in 45° Winkel gesnapt.
+
+- GameManager (Niclas' Szene):
+  - mit Leertaste wird eine Kugel gespawnt. Den Spawnpunkt legt man im Inspector mit einem GameObject fest (Transfrom Wert wird abgefragt).
+  - Ausßerdem das "Ball"-Prefab im Inspector unter "Ball" reinziehen (Das ist das zu instanzierende Objekt).
+ 
+- SelfDestroy Script:
+  - Dieses Script liegt auf dem Ball-Prefab. Es prüft ob sich die Kugel noch bewegt oder den Ground berührt. Wenn die Kugel stehen bleibt oder den Ground berührt, wird sie zerstört.
