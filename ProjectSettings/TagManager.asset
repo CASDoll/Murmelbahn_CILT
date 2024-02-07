@@ -8,8 +8,8 @@ TagManager:
   - buildingPart2
   - buildingPart3
   - buildingPart4
-  - buildingPart0
   - Ground
+  - marble
   layers:
   - Default
   - TransparentFX

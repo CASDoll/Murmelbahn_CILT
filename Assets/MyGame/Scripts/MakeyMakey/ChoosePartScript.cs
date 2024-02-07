@@ -14,13 +14,6 @@ public class ChoosePartScript : MonoBehaviour
     int currentSpecialAbility = 0;
     string currentPartTag = "buildingPart0";
 
-
-    void Start()
-    {
-        
-    }
-
-
     void Update()
     {
         if (Input.GetKey(KeyCode.LeftArrow) && currentPart != 1)
