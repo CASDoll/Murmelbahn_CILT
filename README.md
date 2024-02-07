@@ -36,9 +36,10 @@ STAND ZUM ZEITPUNKT DER ÜBERGABE <br>
   -Die Scripts für die META Quest und Oculus sind drinnen
   -muss noch ausprobieren mit einer VR Brille
 
-- ObjectSnapper Script:
+- ObjectSnapper Script: (MyGame>Marggus>scripts)
   -momentan werden die Bauteile noch mit Leertaste gesnapt - für finale Version mit Handgrab.
   -Bauteile werden in 45° Winkel gesnapt.
+  -noch nicht in VR ausprobiert
 
 - GameManager (Niclas' Szene):
   - mit Leertaste wird eine Kugel gespawnt. Den Spawnpunkt legt man im Inspector mit einem GameObject fest (Transfrom Wert wird abgefragt).
