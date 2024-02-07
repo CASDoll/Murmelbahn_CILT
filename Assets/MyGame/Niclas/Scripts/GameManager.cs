@@ -12,18 +12,9 @@ public class GameManager : MonoBehaviour
 
     public Transform ballSpawn;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
-    {
-
-
-        
+    {   
         if (Input.GetKeyDown(KeyCode.Space))
         {
             SpawnNewBall();
