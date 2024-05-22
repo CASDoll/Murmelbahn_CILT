@@ -12,6 +12,6 @@ public class AdditveSceneLoading : MonoBehaviour
         SceneManager.LoadScene("TamasScene", LoadSceneMode.Additive);
         SceneManager.LoadScene("snappen", LoadSceneMode.Additive);
         SceneManager.LoadScene("TobiasScene", LoadSceneMode.Additive);
-        SceneManager.LoadScene("TestIna", LoadSceneMode.Additive);
+        SceneManager.LoadScene("InaScene", LoadSceneMode.Additive);
     }
 }
