@@ -8,6 +8,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MyGame/Scenes/GameScene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
+  - enabled: 1
+    path: Assets/MyGame/Scenes/ConstanzeScene.unity
+    guid: d556c4f3141b845e6808db82bad574a8
+  - enabled: 1
+    path: Assets/MyGame/Scenes/NiclasScene.unity
+    guid: d9d33c28ec6f2e94eab5c61b242d4b63
+  - enabled: 1
+    path: Assets/MyGame/Scenes/TamasScene.unity
+    guid: e6b8c70202f1e474f93996d73a36c2c6
+  - enabled: 1
+    path: Assets/MyGame/Scenes/TestIna.unity
+    guid: ae0d5b271882e6347bfc8abbec0cae24
+  - enabled: 1
+    path: Assets/MyGame/Scenes/TobiasScene.unity
+    guid: 5fe8c1ad09d21fc4e99c30c47135899e
+  - enabled: 1
+    path: Assets/MyGame/Marggus/scene/snappen.unity
+    guid: 7890213af69b6d140b3869d05386393d
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 5ee5d21960a60764c987360ae8f6385a, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 225b09e1eab1028468489167bf16aeb8, type: 2}
