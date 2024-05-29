@@ -18,7 +18,6 @@ public class ObjectSnapper : MonoBehaviour
     {
         Vector3 currentRotation = transform.rotation.eulerAngles;
         float nearestAngle = Mathf.Round(currentRotation.y / snapAngle) * snapAngle;
-
         transform.rotation = Quaternion.Euler(currentRotation.x, nearestAngle, currentRotation.z);
     }
 }
