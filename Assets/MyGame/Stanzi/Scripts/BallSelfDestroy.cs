@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BallSelfDestroy : MonoBehaviour
 {
-    public float velCheck;
+    //public float velCheck;
     private Vector3 currentPosition;
     private Vector3 positionToCheck;
 
@@ -26,7 +26,7 @@ public class BallSelfDestroy : MonoBehaviour
     IEnumerator MovementChecker()
     {
         positionToCheck = currentPosition;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(2);
         if (currentPosition == positionToCheck)
         {
             Destroy(gameObject);
