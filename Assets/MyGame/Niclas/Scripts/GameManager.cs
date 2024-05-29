@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject ball;
-    public Vector3 ballSpawnPosition;
-    private GameObject sceneBall;
-    bool spacePressed;
+    [SerializeField] GameObject ball;
+    //public Vector3 ballSpawnPosition;
+    public GameObject sceneBall;
+    //bool spacePressed;
     private float timer;
 
     public Transform ballSpawn;
@@ -24,8 +24,8 @@ public class GameManager : MonoBehaviour
     public void SpawnNewBall()
     {
         Debug.Log("Geht");
-        sceneBall = Instantiate(ball, ballSpawnPosition, Quaternion.identity);
+        sceneBall = Instantiate(ball, ballSpawn.position, Quaternion.identity);
         sceneBall.transform.SetParent(ballSpawn);
-        sceneBall.transform.position = ballSpawn.position;
+        //sceneBall.transform.position = ballSpawn.position;
     }
 }

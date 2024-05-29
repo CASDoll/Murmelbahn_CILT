@@ -18,9 +18,6 @@ EditorBuildSettings:
     path: Assets/MyGame/Scenes/TamasScene.unity
     guid: e6b8c70202f1e474f93996d73a36c2c6
   - enabled: 1
-    path: Assets/MyGame/Scenes/InaScene.unity
-    guid: ae0d5b271882e6347bfc8abbec0cae24
-  - enabled: 1
     path: Assets/MyGame/Scenes/TobiasScene.unity
     guid: 5fe8c1ad09d21fc4e99c30c47135899e
   - enabled: 1
