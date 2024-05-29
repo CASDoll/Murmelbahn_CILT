@@ -26,6 +26,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/MyGame/Marggus/scene/snappen.unity
     guid: 7890213af69b6d140b3869d05386393d
+  - enabled: 1
+    path: Assets/MyGame/Scenes/InaScene.unity
+    guid: f6050e96a38d72248b495e34aaf14834
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 5ee5d21960a60764c987360ae8f6385a, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 225b09e1eab1028468489167bf16aeb8, type: 2}
