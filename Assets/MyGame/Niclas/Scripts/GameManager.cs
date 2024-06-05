@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [SerializeField] GameObject ball;
+    [SerializeField]public GameObject ball;
     //public Vector3 ballSpawnPosition;
     public GameObject sceneBall;
     //bool spacePressed;
