@@ -4,26 +4,29 @@ using UnityEngine;
 
 public class SpeedBoost : MonoBehaviour
 {
-    GameManager gM;
+    public GameManager gM;
     Vector3 normalizedVelocity;
     public int speedForce;
-    BoxCollider speedArea; 
 
     void Awake()
     {
-        normalizedVelocity = gM.sceneBall.GetComponent<Rigidbody>().velocity.normalized; 
+        
     }
 
     void Start()
     {
-        this.gameObject.AddComponent<BoxCollider>();
-        speedArea = this.gameObject.GetComponent<BoxCollider>();
-        speedArea.isTrigger = true;
+
+    }
+
+    private void Update()
+    {
+        normalizedVelocity = gM.sceneBall.GetComponent<Rigidbody>().velocity.normalized;
+        //Debug.Log(normalizedVelocity);
     }
 
     private void OnTriggerEnter(Collider other)
     {
-        gM.sceneBall.GetComponent<Rigidbody>().AddForce(normalizedVelocity * speedForce);
+        gM.sceneBall.GetComponent<Rigidbody>().AddForce(normalizedVelocity * Time.deltaTime * speedForce);
         Debug.Log("BOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOST");
     }
 }
