@@ -4,16 +4,22 @@ using UnityEngine;
 
 public class BallSelfDestroy : MonoBehaviour
 {
-    //public float velCheck;
-    private Vector3 currentPosition;
-    private Vector3 positionToCheck;
+    private Vector3 lastPosition;
+    private bool isChecking = false;
+
+    void Start()
+    {
+        lastPosition = transform.position;
+        StartCoroutine(MovementChecker());
+    }
 
     void Update()
     {
-        currentPosition = transform.position;
-        StartCoroutine(MovementChecker());
-
-
+        // Update last position only if ball is moving
+        if (transform.position != lastPosition)
+        {
+            lastPosition = transform.position;
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -23,13 +29,18 @@ public class BallSelfDestroy : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
     IEnumerator MovementChecker()
     {
-        positionToCheck = currentPosition;
-        yield return new WaitForSeconds(2);
-        if (currentPosition == positionToCheck)
+        while (true)
         {
-            Destroy(gameObject);
+            Vector3 positionToCheck = transform.position;
+            yield return new WaitForSeconds(0.5f);
+            if (transform.position == positionToCheck)
+            {
+                Destroy(gameObject);
+                yield break; // Exit coroutine if object is destroyed
+            }
         }
     }
 }
