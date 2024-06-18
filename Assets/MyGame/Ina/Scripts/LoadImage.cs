@@ -27,7 +27,25 @@ public class LoadImage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            Debug.Log("Module 1 ist ausgewählt");
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            Debug.Log("Module 2 ist ausgewählt");
+        }
+
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            Debug.Log("Module 3 ist ausgewählt");
+        }
+
+        if (Input.GetKeyDown(KeyCode.DownArrow))
+        {
+            Debug.Log("Module 4 ist ausgewählt");
+        }
     }
 
     //random Sprite aus Sprites Array wird Image zugewiesen
@@ -46,11 +64,12 @@ public class LoadImage : MonoBehaviour
     }
 
     // die Module werden neu geladen, wenn davor eines ausgewählt wurde
-    public void ResetImages()
+    /*public void ResetImages()
     {
         if (moduleSelected == true)
         {
             LoadSprites();
         }
     }
+    */
 }
