@@ -30,21 +30,37 @@ public class LoadImage : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             Debug.Log("Module 1 ist ausgewählt");
-        }
-
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            Debug.Log("Module 2 ist ausgewählt");
+            image01.color = Color.yellow;
+            image02.color = Color.white;
+            image03.color = Color.white;
+            image04.color = Color.white;
         }
 
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            Debug.Log("Module 3 ist ausgewählt");
+            Debug.Log("Module 2 ist ausgewählt");
+            image01.color = Color.white;
+            image02.color = Color.yellow;
+            image03.color = Color.white;
+            image04.color = Color.white;
         }
 
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
+            Debug.Log("Module 3 ist ausgewählt");
+            image01.color = Color.white;
+            image02.color = Color.white;
+            image03.color = Color.yellow;
+            image04.color = Color.white;
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
             Debug.Log("Module 4 ist ausgewählt");
+            image01.color = Color.white;
+            image02.color = Color.white;
+            image03.color = Color.white;
+            image04.color = Color.yellow;
         }
     }
 
