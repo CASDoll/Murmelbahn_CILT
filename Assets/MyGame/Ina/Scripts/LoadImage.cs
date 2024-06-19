@@ -27,6 +27,21 @@ public class LoadImage : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        SelectModule();
+    }
+
+    //random Sprite aus Sprites Array wird Image zugewiesen
+    public void LoadSprites()
+    {
+        image01.sprite = Sprites[Random.Range(0, Sprites.Length)];
+        image02.sprite = Sprites[Random.Range(0, Sprites.Length)];
+        image03.sprite = Sprites[Random.Range(0, Sprites.Length)];
+        image04.sprite = Sprites[Random.Range(0, Sprites.Length)];
+    }
+
+    // ein Modul wird aus der Liste ausgewählt
+    public void SelectModule()
+    {
         if (Input.GetKeyDown(KeyCode.UpArrow))
         {
             Debug.Log("Module 1 ist ausgewählt");
@@ -62,21 +77,6 @@ public class LoadImage : MonoBehaviour
             image03.color = Color.white;
             image04.color = Color.yellow;
         }
-    }
-
-    //random Sprite aus Sprites Array wird Image zugewiesen
-    public void LoadSprites()
-    {
-        image01.sprite = Sprites[Random.Range(0, Sprites.Length)];
-        image02.sprite = Sprites[Random.Range(0, Sprites.Length)];
-        image03.sprite = Sprites[Random.Range(0, Sprites.Length)];
-        image04.sprite = Sprites[Random.Range(0, Sprites.Length)];
-    }
-
-    // ein Modul wird aus der Liste ausgewählt
-    public void SelectModule()
-    {
-
     }
 
     // die Module werden neu geladen, wenn davor eines ausgewählt wurde
