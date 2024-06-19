@@ -28,6 +28,7 @@ public class LoadImage : MonoBehaviour
     void Update()
     {
         SelectModule();
+        //ResetImages();
     }
 
     //random Sprite aus Sprites Array wird Image zugewiesen
@@ -82,10 +83,12 @@ public class LoadImage : MonoBehaviour
     // die Module werden neu geladen, wenn davor eines ausgewählt wurde
     /*public void ResetImages()
     {
-        if (moduleSelected == true)
+        if (Input.GetKeyUp(KeyCode.UpArrow) || Input.GetKeyUp(KeyCode.RightArrow) || Input.GetKeyUp(KeyCode.DownArrow) || Input.GetKeyUp(KeyCode.LeftArrow))
         {
             LoadSprites();
         }
+        
     }
     */
+    
 }
