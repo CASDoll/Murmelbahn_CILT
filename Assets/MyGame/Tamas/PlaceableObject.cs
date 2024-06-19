@@ -5,12 +5,11 @@ using UnityEngine;
 
 public class PlaceableObject : MonoBehaviour
 {
-    /*
-    private bool placed { get; private set; }
+    public bool placed { get; private set; }
     public Vector3Int size { get; private set; }
     Vector3[] vertices; 
 
-    void GetColliderVerticesPositionsWorld()
+    void GetColliderVerticesPositionsLocal()
     {
         BoxCollider b = gameObject.GetComponent<BoxCollider>();
         vertices = new Vector3[4];
@@ -30,7 +29,7 @@ public class PlaceableObject : MonoBehaviour
             Vertices[i] = BuildingSystem.current.gridLayout.WorldToCell(worldPos);
         }
 
-        size = new Vector3Int(Math.Abs((vertices[0] - vertices[1]).x), Math.Abs((vertices[0] - vertices[3]).y), 1);
+        size = new Vector3Int(Math.Abs((Vertices[0] - Vertices[1]).x), Math.Abs((Vertices[0] - Vertices[3]).y), 1);
     }
 
     public Vector3 GetStartPosition()
@@ -40,19 +39,19 @@ public class PlaceableObject : MonoBehaviour
 
     void Start()
     {
-        GetColliderVerticesPositionsWorld();
+        GetColliderVerticesPositionsLocal();
         CallculateSizeInCells();
     }
 
     public void Rotate()
     {
-        transform.Rotate(eulers: new Vector3(x: 0, y: 90, z: 0));
-        size = new Vector3Int(x: size.y, y: size.x, z: 1);
+        transform.Rotate(new Vector3(0, 90, 0));
+        size = new Vector3Int(size.y, size.x, 1);
 
         Vector3[] Vertices = new Vector3[vertices.Length];
         for (int i = 0; i < Vertices.Length; i++)
         {
-            Vertices[i] = vertices[(i+1)%vertices.Length)];
+            Vertices[i] = vertices[(i+1)%vertices.Length];
         }
         vertices = Vertices; 
     }
@@ -64,5 +63,4 @@ public class PlaceableObject : MonoBehaviour
 
         placed = true; 
     }
-    */
 }

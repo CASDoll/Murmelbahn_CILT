@@ -5,7 +5,6 @@ using UnityEngine.Tilemaps;
 
 public class BuildingSystem : MonoBehaviour
 {
-    /*
     public static BuildingSystem current;
 
     public GridLayout gridLayout;
@@ -63,6 +62,10 @@ public class BuildingSystem : MonoBehaviour
                 Vector3Int start = gridLayout.WorldToCell(objectToPlade.GetStartPosition());
                 TakeArea(start, objectToPlade.size); 
             }
+            else
+            {
+                Destroy(objectToPlade.gameObject);
+            }
         }
         else if (Input.GetKeyDown(KeyCode.Escape))
         {
@@ -89,15 +92,14 @@ public class BuildingSystem : MonoBehaviour
         position = grid.GetCellCenterWorld(cellPos);
         return position; 
     }
-    *
     private static TileBase[] GetTilesBlock(BoundsInt area, Tilemap tilemap)
     {
         TileBase[] array = new TileBase[area.size.x * area.size.y * area.size.z];
         int counter = 0; 
 
-        foreach(var v:Vector3Int in area.allPositionsWithin)
+        foreach(var v in area.allPositionsWithin)
         {
-            Vector3Int pos = new Vector3Int(v.x, v.y, z:0);
+            Vector3Int pos = new Vector3Int(v.x, v.y, 0);
             array[counter] = tilemap.GetTile(pos);
             counter++; 
         }
@@ -121,11 +123,11 @@ public class BuildingSystem : MonoBehaviour
 
         TileBase[] baseArray = GetTilesBlock(area, mainTileMap);
 
-        foreach (var b:TileBase in baseArray)
+        foreach (var b in baseArray)
         {
             if (b == whiteTile)
             {
-                return false; 
+                return false;  
             }
         }
 
@@ -134,8 +136,6 @@ public class BuildingSystem : MonoBehaviour
 
     public void TakeArea(Vector3Int start, Vector3Int size) 
     {
-        mainTileMap.BoxFill(start, whiteTile, startX: start.x, startY: start.y, endX: start.x, endY: start.y, size.y); 
-
+        mainTileMap.BoxFill(start, whiteTile, start.x, start.y, start.x + size.x, start.y + size.y); 
     }
-    */
 }
